@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<title>Minion Machine</title>
+</head>
+<body>
+
+<center>
+  <!-- input for changing background color -->
+  <label>Change your background color:</label><br>
+  <input type="text" id="my_color"/><br>
+  <input onclick="getColor()" type="button" value="change color"/>
+
+  <br>
+
+  <!-- input for getting minion -->
+  <label>What's your minion doing?</label><br>
+  <h7>(farting, alerted, jumping, singing, kissing, surprised, marching)</h7><br>
+  <input name="minion action" type="text" id="minion_action"/><br>
+  <input onclick="getMinion()" type="button" value="get minion!" />
+
+
+  <!-- when the page loads, these images are also loaded but they are invisible because we
+  use "display: none" which sets the image as invisible -->
+  <img src="img/alert.gif" style="display: none;" id="alerted"/>
+  <img src="img/farting.gif" style="display: none;" id="farting"/>
+  <img src="img/jump.gif" style="display: none;" id="jumping"/>
+  <img src="img/karoke.gif" style="display: none;" id="singing"/>
+  <img src="img/kisses.gif" style="display: none;" id="kissing"/>
+  <img src="img/surprised.gif" style="display: none;" id="surprised"/>
+  <img src="img/team.gif" style="display: none;" id="marching"/>
+
+</center>
+<script>
+
+  // function to get color you typed in and changing background color the color
+  function getColor() {
+    // get the variable color name that was typed in
+    var colorName = document.getElementById('my_color').value;
+    // check what color was inputted and change background color
+    if (colorName == 'red') {
+      document.body.style.backgroundColor = "#fdcece";
+    } else if (colorName == 'orange') {
+      document.body.style.backgroundColor = "#fde8ce";
+    } else {
+      alert('Pick a color that is available! Colors: red, orange, yellow, green, blue, purple, pink')
+    }
+  }
+
+
+  // function to get the Animal after you type it into the search bar
+  function getMinion() {
+    // Hide all the animals first
+    document.getElementById('alerted').style.display = "none";
+    document.getElementById('farting').style.display = "none";
+    document.getElementById('jumping').style.display ="none";
+    document.getElementById('singing').style.display = "none";
+    document.getElementById('kissing').style.display = "none";
+    document.getElementById('surprised').style.display ="none";
+    document.getElementById('marching').style.display ="none";
+
+
+    // Write your code here !!!!!!
+
+
+
+    
+  }
+</script>
+
+</body>
+</html>
